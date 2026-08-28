@@ -1,0 +1,33 @@
+{
+  "runId": "80fd7855-30ce-441c-a5ed-dfc860a59512",
+  "mode": "replay",
+  "startedAt": "2026-08-28T01:39:20.302Z",
+  "initiatedBy": "cli",
+  "capabilityId": "meridian.look_up_a_member_by_their_member_id_and_",
+  "steps": [
+    {
+      "stepId": "step_1",
+      "action": "fill",
+      "description": "Enter member ID 12345",
+      "url": "http://localhost:3000/search",
+      "durationMs": 36,
+      "locatorStrategyUsed": "css=input[name=\"id\"]",
+      "index": 0,
+      "timestamp": "2026-08-28T01:39:20.502Z",
+      "prevHash": "genesis",
+      "hash": "8269c7b3c9754655e71d34a0355c76a6b7f254e8f1be151bb7d58e9a464671f0"
+    },
+    {
+      "stepId": "step_2",
+      "action": "assisted_recovery",
+      "description": "LLM re-resolved 'Click Search button' → ref e19. Rationale: The button labeled \"Search\" matches the intent to click the Search button, replacing the failed \"Find Member\" locator.",
+      "url": "http://localhost:3000/member?id=12345",
+      "index": 1,
+      "timestamp": "2026-08-28T01:39:27.573Z",
+      "prevHash": "8269c7b3c9754655e71d34a0355c76a6b7f254e8f1be151bb7d58e9a464671f0",
+      "hash": "5792eeade9f52e4b82a85c30623d2a56f09b8500837d726dfac2414414e3e515"
+    }
+  ],
+  "success": true,
+  "completedAt": "2026-08-28T01:39:27.598Z"
+}

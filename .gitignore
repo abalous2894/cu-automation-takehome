@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+
+# Playwright artifacts (keep evidence/ committed)
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Runtime session state
+.sessions/
+
+# Personal prep notes — not part of the submission
+submission-email.md

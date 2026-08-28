@@ -1,0 +1,36 @@
+{
+  "runId": "11b19321-4ab4-4171-bc23-374b497c5860",
+  "mode": "replay",
+  "startedAt": "2026-08-28T01:38:58.874Z",
+  "initiatedBy": "cli",
+  "capabilityId": "meridian.look_up_a_member_by_their_member_id_and_",
+  "steps": [
+    {
+      "stepId": "step_1",
+      "action": "fill",
+      "description": "Enter member ID 12345",
+      "url": "http://localhost:3000/search",
+      "durationMs": 61,
+      "locatorStrategyUsed": "role=textbox name=textbox",
+      "drift": true,
+      "index": 0,
+      "timestamp": "2026-08-28T01:39:00.179Z",
+      "prevHash": "genesis",
+      "hash": "67fb7106a91cd124fc4779c94fdaad7c813fc371d4207b5599eb283e720f1d17"
+    },
+    {
+      "stepId": "step_2",
+      "action": "click",
+      "description": "Click Search button",
+      "url": "http://localhost:3000/member?id=12345",
+      "durationMs": 57,
+      "locatorStrategyUsed": "role=button name=Search",
+      "index": 1,
+      "timestamp": "2026-08-28T01:39:00.241Z",
+      "prevHash": "67fb7106a91cd124fc4779c94fdaad7c813fc371d4207b5599eb283e720f1d17",
+      "hash": "ed242ee5f1f747b4fb879e6d0c0b2a86a75075df16c3f4477ca454d472046f5f"
+    }
+  ],
+  "success": true,
+  "completedAt": "2026-08-28T01:39:00.283Z"
+}

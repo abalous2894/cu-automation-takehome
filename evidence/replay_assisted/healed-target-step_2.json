@@ -1,0 +1,11 @@
+{
+  "strategies": [
+    {
+      "type": "role",
+      "role": "button",
+      "name": "Search",
+      "value": "Search",
+      "match": "exact"
+    }
+  ]
+}

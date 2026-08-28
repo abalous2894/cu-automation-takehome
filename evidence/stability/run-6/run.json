@@ -1,0 +1,29 @@
+{
+  "runId": "387b1bf6-87e9-47ae-bd3e-a181252580c6",
+  "mode": "replay",
+  "startedAt": "2026-08-27T20:18:16.850Z",
+  "initiatedBy": "cli",
+  "capabilityId": "meridian.look_up_a_member_by_their_member_id_and_",
+  "steps": [
+    {
+      "stepId": "step_1",
+      "action": "fill",
+      "description": "Enter member ID 12345",
+      "url": "http://localhost:3000/search",
+      "durationMs": 28,
+      "index": 0,
+      "timestamp": "2026-08-27T20:18:17.033Z"
+    },
+    {
+      "stepId": "step_2",
+      "action": "click",
+      "description": "Click Search button",
+      "url": "http://localhost:3000/member?id=12345",
+      "durationMs": 57,
+      "index": 1,
+      "timestamp": "2026-08-27T20:18:17.094Z"
+    }
+  ],
+  "success": true,
+  "completedAt": "2026-08-27T20:18:17.121Z"
+}

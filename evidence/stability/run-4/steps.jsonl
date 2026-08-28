@@ -1,0 +1,2 @@
+{"stepId":"step_1","action":"fill","description":"Enter member ID 12345","url":"http://localhost:3000/search","durationMs":29,"index":0,"timestamp":"2026-08-27T20:18:16.342Z"}
+{"stepId":"step_2","action":"click","description":"Click Search button","url":"http://localhost:3000/member?id=12345","durationMs":50,"index":1,"timestamp":"2026-08-27T20:18:16.396Z"}

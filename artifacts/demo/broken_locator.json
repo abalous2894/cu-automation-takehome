@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.0",
+  "id": "meridian.look_up_a_member_by_their_member_id_and_",
+  "name": "Look up a member by their member ID and read their savings balance",
+  "description": "Look up a member by their member ID and read their savings balance",
+  "target": {
+    "appId": "meridian-core",
+    "vendor": "Meridian Systems",
+    "entryUrl": "http://localhost:3000/search"
+  },
+  "parameters": {
+    "memberId": {
+      "type": "string",
+      "description": "Parameter: memberId",
+      "required": true,
+      "sensitive": false
+    }
+  },
+  "outputs": {
+    "memberId": {
+      "type": "string",
+      "description": "Extracted: memberId",
+      "sensitive": false,
+      "extract": {
+        "pattern": "Member #:[ \\t]+([^\\n\\t]+)"
+      }
+    },
+    "memberName": {
+      "type": "string",
+      "description": "Extracted: memberName",
+      "sensitive": true,
+      "extract": {
+        "pattern": "Member Name:[ \\t]+([^\\n\\t]+)"
+      }
+    },
+    "status": {
+      "type": "string",
+      "description": "Extracted: status",
+      "sensitive": false,
+      "extract": {
+        "pattern": "Status:[ \\t]+([^\\n\\t]+)"
+      }
+    },
+    "savingsBalance": {
+      "type": "string",
+      "description": "Extracted: savingsBalance",
+      "sensitive": false,
+      "extract": {
+        "pattern": "Savings[ \\t]+([^\\n\\t]+)"
+      }
+    },
+    "checkingBalance": {
+      "type": "string",
+      "description": "Extracted: checkingBalance",
+      "sensitive": false,
+      "extract": {
+        "pattern": "Checking[ \\t]+([^\\n\\t]+)"
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "step_1",
+      "action": "fill",
+      "description": "Enter member ID <memberId>",
+      "target": {
+        "strategies": [
+          {
+            "type": "css",
+            "value": "input[name=\"id\"]",
+            "match": "exact"
+          },
+          {
+            "type": "role",
+            "role": "textbox",
+            "value": "textbox",
+            "match": "exact"
+          }
+        ]
+      },
+      "value": {
+        "$param": "memberId"
+      },
+      "riskLevel": "safe",
+      "timeoutMs": 10000,
+      "optional": false
+    },
+    {
+      "id": "step_2",
+      "action": "click",
+      "description": "Click Search button",
+      "target": {
+        "strategies": [
+          {
+            "type": "role",
+            "role": "button",
+            "name": "Find Member",
+            "value": "Find Member",
+            "match": "exact"
+          }
+        ]
+      },
+      "riskLevel": "safe",
+      "timeoutMs": 10000,
+      "optional": false
+    }
+  ],
+  "successCheckpoint": {
+    "type": "text_present",
+    "value": "Account Summary",
+    "timeoutMs": 10000
+  },
+  "errorHandlers": [
+    {
+      "id": "member_not_found",
+      "detect": {
+        "type": "text_present",
+        "value": "No member found"
+      },
+      "response": {
+        "kind": "business_outcome",
+        "code": "MEMBER_NOT_FOUND",
+        "message": "The requested member ID does not exist"
+      }
+    },
+    {
+      "id": "session_timeout",
+      "detect": {
+        "type": "dialog_present",
+        "value": "Session expired"
+      },
+      "response": {
+        "kind": "recoverable",
+        "code": "SESSION_TIMEOUT",
+        "message": "Session expired — attempting recovery",
+        "recoveryAction": {
+          "action": "click",
+          "value": "OK"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "recordedAt": "2026-08-27T20:17:04.053Z",
+    "recordedBy": "discovery",
+    "surfaceType": "web",
+    "riskProfile": "read_only",
+    "discoveryModel": "claude-sonnet-5",
+    "discoveryGoal": "Look up a member by their member ID and read their savings balance"
+  }
+}

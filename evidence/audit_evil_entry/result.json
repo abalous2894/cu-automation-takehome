@@ -1,0 +1,11 @@
+{
+  "status": "failure",
+  "step": "run",
+  "failureClass": "policy_violation",
+  "expected": "Run completes or ends with a structured result",
+  "observed": "Navigation to evil.example.com is not in the allowlist",
+  "runId": "43017684-7c88-4ea4-acf7-e3114853853b",
+  "evidence": {
+    "screenshot": "evidence/audit_evil_entry/screenshots/unhandled-error.png"
+  }
+}

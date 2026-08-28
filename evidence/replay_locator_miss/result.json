@@ -1,0 +1,11 @@
+{
+  "status": "failure",
+  "step": "step_2",
+  "failureClass": "locator_miss",
+  "expected": "Click Search button",
+  "observed": "No locator strategy resolved uniquely: [{\"type\":\"role\",\"role\":\"button\",\"name\":\"Find Member\",\"value\":\"Find Member\",\"match\":\"exact\"}]",
+  "runId": "e74a846d-8c5b-410c-ade4-b7717086c4b2",
+  "evidence": {
+    "screenshot": "evidence/replay_locator_miss/screenshots/error-step_2.png"
+  }
+}

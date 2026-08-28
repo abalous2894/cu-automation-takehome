@@ -1,0 +1,7 @@
+{"stepId":"step_1","action":"fill","description":"Enter member ID in search field","url":"http://localhost:3000/search","durationMs":35,"index":0,"timestamp":"2026-08-27T19:54:05.317Z"}
+{"stepId":"step_2","action":"click","description":"Click Search button","url":"http://localhost:3000/member?id=12345","durationMs":61,"index":1,"timestamp":"2026-08-27T19:54:05.382Z"}
+{"stepId":"step_3","action":"click","description":"Click Open New Sub-Account","url":"http://localhost:3000/subaccount?memberId=12345","durationMs":59,"index":2,"timestamp":"2026-08-27T19:54:05.464Z"}
+{"stepId":"step_4","action":"select","description":"Select account type","url":"http://localhost:3000/subaccount?memberId=12345","durationMs":9,"index":3,"timestamp":"2026-08-27T19:54:05.497Z"}
+{"stepId":"step_5","action":"click","description":"Continue to confirmation screen","url":"http://localhost:3000/subaccount/confirm","durationMs":197,"index":4,"timestamp":"2026-08-27T19:54:05.697Z"}
+{"stepId":"step_6","action":"intervention","description":"Human resolved (approved): Reviewed confirmation details — deposit and account type correct. Approved for automated submit.","url":"http://localhost:3000/subaccount/confirm","index":5,"timestamp":"2026-08-27T19:54:31.370Z"}
+{"stepId":"step_6","action":"click","description":"Submit — create the sub-account (IRREVERSIBLE)","url":"http://localhost:3000/subaccount/submit","durationMs":57,"index":6,"timestamp":"2026-08-27T19:54:31.428Z"}

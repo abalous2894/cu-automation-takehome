@@ -1,0 +1,19 @@
+{
+  "runId": "2b28a1cf-edc2-48ea-86a6-6d3bd1f32782",
+  "mode": "replay",
+  "startedAt": "2026-08-28T02:10:13.378Z",
+  "initiatedBy": "cli",
+  "capabilityId": "meridian.look_up_a_member_by_their_member_id_and_",
+  "steps": [],
+  "result": {
+    "status": "failure",
+    "step": "step_1",
+    "failureClass": "unknown",
+    "expected": "Enter member ID 12345",
+    "observed": "Missing required parameter: memberId",
+    "runId": "2b28a1cf-edc2-48ea-86a6-6d3bd1f32782",
+    "evidence": {
+      "screenshot": "evidence/audit_missing_param/screenshots/error-step_1.png"
+    }
+  }
+}

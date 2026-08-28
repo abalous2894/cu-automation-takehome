@@ -1,0 +1,12 @@
+{
+  "id": "5d753117-e4ef-4415-9a79-7da2e8c9a9a0",
+  "sessionId": "cc6360d1-9bf9-47ec-8e70-c9b8f24f1939",
+  "reason": "Irreversible step requires human approval: Submit — create the sub-account (IRREVERSIBLE)",
+  "capabilityId": "meridian.open_subaccount",
+  "currentStep": "step_6",
+  "currentStepIndex": 5,
+  "screenshotPath": "evidence/interventions/5d753117-e4ef-4415-9a79-7da2e8c9a9a0/screenshot.png",
+  "snapshotPath": "evidence/interventions/5d753117-e4ef-4415-9a79-7da2e8c9a9a0/snapshot.yaml",
+  "createdAt": "2026-08-27T19:54:05.821Z",
+  "status": "pending"
+}

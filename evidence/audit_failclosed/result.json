@@ -1,0 +1,6 @@
+{
+  "status": "escalated",
+  "interventionId": "3ab98108-1af8-40bb-bf58-7a7c15c98508",
+  "reason": "Unrecognized disposition 'yolo_approve' — failing closed",
+  "runId": "21e3b5e7-4cb3-49eb-a2a1-360e39004499"
+}

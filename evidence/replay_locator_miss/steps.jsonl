@@ -1,0 +1,1 @@
+{"stepId":"step_1","action":"fill","description":"Enter member ID 12345","url":"http://localhost:3000/search","durationMs":39,"locatorStrategyUsed":"css=input[name=\"id\"]","index":0,"timestamp":"2026-08-28T01:39:11.438Z","prevHash":"genesis","hash":"c004ae2d06c00a2c0b399f57b6726b68542890eec7ac09645e243c84f2706e92"}

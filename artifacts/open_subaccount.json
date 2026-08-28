@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "1.0",
+  "id": "meridian.open_subaccount",
+  "name": "Open New Sub-Account",
+  "description": "Open a new sub-account for a member. The final submit is irreversible and requires human approval.",
+  "target": {
+    "appId": "meridian-core",
+    "vendor": "Meridian Systems",
+    "entryUrl": "http://localhost:3000/search"
+  },
+  "parameters": {
+    "memberId": {
+      "type": "string",
+      "description": "Member account number",
+      "required": true,
+      "sensitive": false
+    },
+    "accountType": {
+      "type": "string",
+      "description": "Type of sub-account to open: savings or checking",
+      "required": true,
+      "sensitive": false
+    }
+  },
+  "outputs": {
+    "confirmation": {
+      "type": "string",
+      "description": "Confirmation message after account creation",
+      "sensitive": false
+    }
+  },
+  "steps": [
+    {
+      "id": "step_1",
+      "action": "fill",
+      "description": "Enter member ID in search field",
+      "target": {
+        "strategies": [
+          { "type": "css", "value": "input[name=\"id\"]", "match": "exact" },
+          { "type": "role", "role": "textbox", "value": "textbox", "match": "exact" }
+        ]
+      },
+      "value": { "$param": "memberId" },
+      "riskLevel": "safe",
+      "timeoutMs": 10000,
+      "optional": false
+    },
+    {
+      "id": "step_2",
+      "action": "click",
+      "description": "Click Search button",
+      "target": {
+        "strategies": [
+          { "type": "role", "role": "button", "name": "Search", "value": "Search", "match": "exact" }
+        ]
+      },
+      "riskLevel": "safe",
+      "timeoutMs": 10000,
+      "optional": false,
+      "checkpoint": {
+        "type": "text_present",
+        "value": "Account Summary",
+        "timeoutMs": 10000
+      }
+    },
+    {
+      "id": "step_3",
+      "action": "click",
+      "description": "Click Open New Sub-Account",
+      "target": {
+        "strategies": [
+          { "type": "role", "role": "button", "name": "Open New Sub-Account", "value": "Open New Sub-Account", "match": "exact" }
+        ]
+      },
+      "riskLevel": "safe",
+      "timeoutMs": 10000,
+      "optional": false,
+      "checkpoint": {
+        "type": "text_present",
+        "value": "Open New Sub-Account",
+        "timeoutMs": 10000
+      }
+    },
+    {
+      "id": "step_4",
+      "action": "select",
+      "description": "Select account type",
+      "target": {
+        "strategies": [
+          { "type": "css", "value": "select[name=\"accountType\"]", "match": "exact" }
+        ]
+      },
+      "value": { "$param": "accountType" },
+      "riskLevel": "safe",
+      "timeoutMs": 10000,
+      "optional": false
+    },
+    {
+      "id": "step_5",
+      "action": "click",
+      "description": "Continue to confirmation screen",
+      "target": {
+        "strategies": [
+          { "type": "role", "role": "button", "name": "Continue to Confirmation", "value": "Continue to Confirmation", "match": "exact" }
+        ]
+      },
+      "riskLevel": "reversible",
+      "timeoutMs": 10000,
+      "optional": false,
+      "checkpoint": {
+        "type": "text_present",
+        "value": "Confirmation Required",
+        "timeoutMs": 10000
+      }
+    },
+    {
+      "id": "step_6",
+      "action": "click",
+      "description": "Submit — create the sub-account (IRREVERSIBLE)",
+      "target": {
+        "strategies": [
+          { "type": "role", "role": "button", "name": "Submit — Create Account", "value": "Submit — Create Account", "match": "exact" }
+        ]
+      },
+      "riskLevel": "irreversible",
+      "timeoutMs": 10000,
+      "optional": false,
+      "checkpoint": {
+        "type": "text_present",
+        "value": "Sub-Account Created",
+        "timeoutMs": 10000
+      }
+    }
+  ],
+  "successCheckpoint": {
+    "type": "text_present",
+    "value": "Sub-Account Created",
+    "timeoutMs": 10000
+  },
+  "errorHandlers": [
+    {
+      "id": "member_not_found",
+      "detect": { "type": "text_present", "value": "No member found" },
+      "response": {
+        "kind": "business_outcome",
+        "code": "MEMBER_NOT_FOUND",
+        "message": "The requested member ID does not exist in the system"
+      }
+    }
+  ],
+  "metadata": {
+    "recordedAt": "2026-08-27T19:50:00.000Z",
+    "recordedBy": "human",
+    "surfaceType": "web",
+    "riskProfile": "irreversible",
+    "discoveryGoal": "Open a new sub-account for a member and complete the confirmation"
+  }
+}

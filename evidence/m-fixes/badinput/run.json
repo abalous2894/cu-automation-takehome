@@ -1,0 +1,16 @@
+{
+  "runId": "7e72f4b4-a20e-4835-b723-3178e13497ae",
+  "mode": "replay",
+  "startedAt": "2026-08-28T02:31:17.784Z",
+  "initiatedBy": "cli",
+  "capabilityId": "meridian.look_up_a_member_by_their_member_id_and_",
+  "steps": [],
+  "result": {
+    "status": "failure",
+    "step": "preflight",
+    "failureClass": "invalid_input",
+    "expected": "Invocation matching the artifact contract and policy",
+    "observed": "Missing required parameter: memberId",
+    "runId": "7e72f4b4-a20e-4835-b723-3178e13497ae"
+  }
+}

@@ -1,0 +1,23 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - text: MERIDIAN CU CORE v4.2.1 |
+    - link "Home" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - link "Member Search" [ref=e4] [cursor=pointer]:
+      - /url: /search
+    - link "Tenant A" [ref=e5] [cursor=pointer]:
+      - /url: /tenant-a/search
+    - link "Tenant B" [ref=e6] [cursor=pointer]:
+      - /url: /tenant-b/search
+  - generic [ref=e7]:
+    - heading "Member Search" [level=2] [ref=e8]
+    - table [ref=e10]:
+      - rowgroup [ref=e11]:
+        - row [ref=e12]:
+          - 'cell "Member #" [ref=e13]'
+          - cell [ref=e14]:
+            - textbox [active] [ref=e15]: "12345"
+        - row [ref=e16]:
+          - cell [ref=e17]
+          - cell [ref=e18]:
+            - button "Search" [ref=e19] [cursor=pointer]

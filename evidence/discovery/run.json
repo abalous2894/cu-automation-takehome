@@ -1,0 +1,44 @@
+{
+  "runId": "0c81d2d5-5c55-40ff-9bff-faeda2196d25",
+  "mode": "discovery",
+  "startedAt": "2026-08-27T20:16:53.287Z",
+  "initiatedBy": "agent",
+  "goal": "Look up a member by their member ID and read their savings balance",
+  "steps": [
+    {
+      "action": "navigate",
+      "description": "Navigate to http://localhost:3000/search",
+      "url": "http://localhost:3000/search",
+      "index": 0,
+      "timestamp": "2026-08-27T20:16:53.447Z"
+    },
+    {
+      "stepId": "step_1",
+      "action": "fill",
+      "description": "Enter member ID 12345",
+      "url": "http://localhost:3000/search",
+      "durationMs": 46,
+      "index": 1,
+      "timestamp": "2026-08-27T20:17:00.497Z"
+    },
+    {
+      "stepId": "step_2",
+      "action": "click",
+      "description": "Click Search button",
+      "url": "http://localhost:3000/member?id=12345",
+      "durationMs": 55,
+      "index": 2,
+      "timestamp": "2026-08-27T20:17:01.766Z"
+    },
+    {
+      "action": "done",
+      "description": "Looked up member 12345 (Jane Smith) via Member Search. Account is ACTIVE with a Savings balance of $8420.50 and Checking balance of $1250.00.",
+      "durationMs": 0,
+      "index": 3,
+      "timestamp": "2026-08-27T20:17:04.049Z"
+    }
+  ],
+  "success": true,
+  "stepsRecorded": 2,
+  "completedAt": "2026-08-27T20:17:04.055Z"
+}

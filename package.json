@@ -1,0 +1,36 @@
+{
+  "name": "cu-automation-takehome",
+  "version": "0.1.0",
+  "description": "Computer-use automation system: LLM discovery → capability artifact → deterministic replay",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "mock-app": "tsx mock-app/server.ts",
+    "discover": "tsx src/cli/discover.ts",
+    "replay": "tsx src/cli/replay.ts",
+    "agent": "tsx src/cli/agent.ts",
+    "operator": "tsx src/cli/operator.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "playwright": "^1.51.0",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.10",
+    "@types/uuid": "^10.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}

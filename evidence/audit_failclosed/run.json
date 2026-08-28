@@ -1,0 +1,75 @@
+{
+  "runId": "21e3b5e7-4cb3-49eb-a2a1-360e39004499",
+  "mode": "replay",
+  "startedAt": "2026-08-28T02:22:03.892Z",
+  "initiatedBy": "cli",
+  "capabilityId": "meridian.open_subaccount",
+  "steps": [
+    {
+      "stepId": "step_1",
+      "action": "fill",
+      "description": "Enter member ID in search field",
+      "url": "http://localhost:3000/search",
+      "durationMs": 41,
+      "locatorStrategyUsed": "css=input[name=\"id\"]",
+      "index": 0,
+      "timestamp": "2026-08-28T02:22:04.115Z",
+      "prevHash": "genesis",
+      "hash": "cce2612be58516ad5fa851142f623d91c382efaeeea7f41f882a5be99cea0bfe"
+    },
+    {
+      "stepId": "step_2",
+      "action": "click",
+      "description": "Click Search button",
+      "url": "http://localhost:3000/member?id=12345",
+      "durationMs": 55,
+      "locatorStrategyUsed": "role=button name=Search",
+      "index": 1,
+      "timestamp": "2026-08-28T02:22:04.173Z",
+      "prevHash": "cce2612be58516ad5fa851142f623d91c382efaeeea7f41f882a5be99cea0bfe",
+      "hash": "d3a3f36101b40c4da7d5f0cd645a788247a6631e18b0e505c0058ff497cb7a15"
+    },
+    {
+      "stepId": "step_3",
+      "action": "click",
+      "description": "Click Open New Sub-Account",
+      "url": "http://localhost:3000/subaccount?memberId=12345",
+      "durationMs": 63,
+      "locatorStrategyUsed": "role=button name=Open New Sub-Account",
+      "index": 2,
+      "timestamp": "2026-08-28T02:22:04.262Z",
+      "prevHash": "d3a3f36101b40c4da7d5f0cd645a788247a6631e18b0e505c0058ff497cb7a15",
+      "hash": "a1efe3df4f9f2a04f18d667de7ed977a3cfe2a9fc68910146bce98fb083d7ee0"
+    },
+    {
+      "stepId": "step_4",
+      "action": "select",
+      "description": "Select account type",
+      "url": "http://localhost:3000/subaccount?memberId=12345",
+      "durationMs": 9,
+      "locatorStrategyUsed": "css=select[name=\"accountType\"]",
+      "index": 3,
+      "timestamp": "2026-08-28T02:22:04.299Z",
+      "prevHash": "a1efe3df4f9f2a04f18d667de7ed977a3cfe2a9fc68910146bce98fb083d7ee0",
+      "hash": "cc10a845e24ab9f05823e4b8dfbe0d2b2b63cd6129adc0cba2ac30027ab56a37"
+    },
+    {
+      "stepId": "step_5",
+      "action": "click",
+      "description": "Continue to confirmation screen",
+      "url": "http://localhost:3000/subaccount/confirm",
+      "durationMs": 195,
+      "locatorStrategyUsed": "role=button name=Continue to Confirmation",
+      "index": 4,
+      "timestamp": "2026-08-28T02:22:04.497Z",
+      "prevHash": "cc10a845e24ab9f05823e4b8dfbe0d2b2b63cd6129adc0cba2ac30027ab56a37",
+      "hash": "465dcc87fe4c4396fa44d876599f75b988bf510e264f874eb9d9d956cca367d0"
+    }
+  ],
+  "result": {
+    "status": "escalated",
+    "interventionId": "3ab98108-1af8-40bb-bf58-7a7c15c98508",
+    "reason": "Unrecognized disposition 'yolo_approve' — failing closed",
+    "runId": "21e3b5e7-4cb3-49eb-a2a1-360e39004499"
+  }
+}

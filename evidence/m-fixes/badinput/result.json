@@ -1,0 +1,8 @@
+{
+  "status": "failure",
+  "step": "preflight",
+  "failureClass": "invalid_input",
+  "expected": "Invocation matching the artifact contract and policy",
+  "observed": "Missing required parameter: memberId",
+  "runId": "7e72f4b4-a20e-4835-b723-3178e13497ae"
+}

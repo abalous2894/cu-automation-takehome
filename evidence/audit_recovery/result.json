@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "outputs": {
+    "memberId": "12345",
+    "memberName": "[REDACTED]",
+    "status": "ACTIVE",
+    "savingsBalance": "$8420.50",
+    "checkingBalance": "$1250.00"
+  },
+  "runId": "96dd0a25-8712-46dd-8108-5349be604234",
+  "durationMs": 383,
+  "stepsExecuted": 2
+}

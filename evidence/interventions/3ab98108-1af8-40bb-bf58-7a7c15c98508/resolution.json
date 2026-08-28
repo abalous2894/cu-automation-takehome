@@ -1,0 +1,6 @@
+{
+  "disposition": "yolo_approve",
+  "notes": "audit test: simulated tampered resolution written outside the operator flow",
+  "resolvedAt": "2026-08-28T02:22:00.000Z",
+  "resolvedBy": "audit-tamper-simulation"
+}

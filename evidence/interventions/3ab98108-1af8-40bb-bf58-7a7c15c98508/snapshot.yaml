@@ -1,0 +1,26 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - text: MERIDIAN CU CORE v4.2.1 |
+    - link "Home" [ref=f3e3] [cursor=pointer]:
+      - /url: /
+    - link "Member Search" [ref=f3e4] [cursor=pointer]:
+      - /url: /search
+    - link "Tenant A" [ref=f3e5] [cursor=pointer]:
+      - /url: /tenant-a/search
+    - link "Tenant B" [ref=f3e6] [cursor=pointer]:
+      - /url: /tenant-b/search
+  - generic [ref=f3e7]:
+    - heading "Confirmation Required" [level=2] [ref=f3e8]
+    - generic [ref=f3e9]: This action cannot be undone. Review details before submitting.
+    - table [ref=f3e10]:
+      - rowgroup [ref=f3e11]:
+        - row [ref=f3e12]:
+          - 'cell "Member #:" [ref=f3e13]'
+          - cell "12345" [ref=f3e14]
+        - row [ref=f3e15]:
+          - cell "Account Type:" [ref=f3e16]
+          - cell "savings" [ref=f3e17]
+        - row [ref=f3e18]:
+          - cell "Initial Deposit:" [ref=f3e19]
+          - cell "$0.00" [ref=f3e20]
+    - button "Submit — Create Account" [ref=f3e22] [cursor=pointer]
