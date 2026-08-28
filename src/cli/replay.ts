@@ -18,6 +18,10 @@ program
     "--assist",
     "On locator miss, allow one bounded LLM call to recover the step (recorded as evidence)",
   )
+  .option(
+    "--linger <ms>",
+    "Hold the browser open N ms after a successful run (headed demo convenience)",
+  )
   .action(async (opts) => {
     const params = JSON.parse(opts.params) as Record<string, unknown>;
     const times = parseInt(opts.times, 10);
@@ -37,6 +41,7 @@ program
         outputDir,
         headless: !opts.headed,
         assist: Boolean(opts.assist),
+        lingerMs: opts.linger ? parseInt(opts.linger, 10) : undefined,
       });
       results.push(result);
       console.log(`  Status: ${result.status}`);

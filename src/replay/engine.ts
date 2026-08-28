@@ -35,6 +35,11 @@ export interface ReplayOptions {
    * recorded as evidence. Never open-ended. Off by default.
    */
   assist?: boolean;
+  /**
+   * Demo convenience: hold the browser open for N ms after the run completes
+   * so a headed viewer can see the final page state before cleanup.
+   */
+  lingerMs?: number;
 }
 
 interface StepExecution {
@@ -404,6 +409,9 @@ export class ReplayEngine {
       });
       await evidence.finalize({ success: true });
       session.complete();
+      if (opts.lingerMs) {
+        await page.waitForTimeout(opts.lingerMs).catch(() => {});
+      }
       return result;
     } catch (err) {
       // A guardrail that blocks an action but records nothing is itself an

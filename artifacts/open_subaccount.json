@@ -26,7 +26,10 @@
     "confirmation": {
       "type": "string",
       "description": "Confirmation message after account creation",
-      "sensitive": false
+      "sensitive": false,
+      "extract": {
+        "pattern": "(New \\w+ account created for member [0-9]+\\.)"
+      }
     }
   },
   "steps": [
