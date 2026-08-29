@@ -4,7 +4,7 @@ dist/
 *.log
 .DS_Store
 
-# Playwright artifacts (keep evidence/ committed)
+# Playwright artifacts (curated evidence/ is committed — see EVIDENCE.md)
 /test-results/
 /playwright-report/
 /blob-report/
@@ -13,5 +13,18 @@ dist/
 # Runtime session state
 .sessions/
 
-# Personal prep notes — not part of the submission
+# Personal prep — not part of the submission
 submission-email.md
+demo-cmds
+
+# Local rehearsal runs (video recording, ad-hoc replays, scratch interventions)
+/evidence/video/
+/evidence/replay/
+/evidence/interventions/
+
+# One-off local test output directories
+/evidence/linger-test/
+/evidence/confirm-fix/
+/evidence/hitl-test/
+/evidence/hitl-headed-test/
+/evidence/smoke/

@@ -1,7 +1,0 @@
-{
-  "status": "business_outcome",
-  "code": "MEMBER_NOT_FOUND",
-  "message": "The requested member ID does not exist",
-  "step": "member_not_found",
-  "runId": "60588aa2-6407-4035-b0e1-243b25019318"
-}

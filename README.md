@@ -4,6 +4,7 @@
 
 Give the system a natural-language goal ("look up a member's savings balance"). A discovery agent drives the real UI via its accessibility tree, and the run is recorded as a **typed, parameterized capability artifact** — a contract with declared inputs, outputs, checkpoints, and error handlers. Replay executes that artifact deterministically: no LLM, ~50× faster (~19s discovery → ~350ms replay), with policy guardrails, tamper-evident audit logs, human escalation on irreversible steps, and drift telemetry that flags UI changes before they break anything.
 
+- **Demo video:** [3-min walkthrough](https://youtu.be/RHHhyVeJOXE) — discovery, replay, HITL escalation, assisted recovery
 - **Design write-up:** [`REPORT.md`](REPORT.md) — architecture, error taxonomy, safety model, trade-offs
 - **Proof:** [`EVIDENCE.md`](EVIDENCE.md) — every claim mapped to a real run artifact in `/evidence/`
 - **Decision log:** [`decisions.md`](decisions.md) — one-line rationale per design choice, including how AI-assisted development was directed

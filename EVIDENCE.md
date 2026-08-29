@@ -16,7 +16,7 @@ All replay evidence derives from **one artifact recorded by a real LLM discovery
 | `evidence/discovery/snapshots/step-*.yaml` | The accessibility-tree observations the model actually saw |
 | `evidence/discovery/capability.json` | The recorded artifact: typed `parameters`/`outputs`, multi-strategy locators, checkpoints, error handlers |
 
-Note in `capability.json`: the agent typed the literal `12345` during discovery, but the recorded step stores `{"$param": "memberId"}` — canonicalized automatically, so no PII is baked into the artifact.
+Note in `capability.json`: the agent typed a literal test value during discovery, but the recorded step stores `{"$param": "memberId"}` and descriptions use `<memberId>` — canonicalized automatically, so no PII is baked into the artifact.
 
 ## 2. Deterministic replay — no LLM, ~50× faster
 
@@ -106,8 +106,7 @@ Note in `capability.json`: the agent typed the literal `12345` during discovery,
 | `evidence/interventions/3ab98108-*/resolution.json` | The simulated tampered approval that was rejected |
 | `evidence/audit_recovery/steps.jsonl` | Session-timeout dialog detected → `recovered` entry in the hash chain → run *continued* to full success |
 | `scripts/test-route-guard.ts` | Network-layer allowlist: external `goto` AND click-triggered navigation both render a "Blocked by policy" page; no request leaves the machine |
-| `evidence/m-fixes/badinput/result.json` | Missing required parameter → pre-flight `failureClass: "invalid_input"` in under a second, before any browser launches |
-| `evidence/m-fixes/discovery/capability.json` | Fresh LLM discovery run: step descriptions read "Enter member ID `<memberId>`" — test values scrubbed from prose, not just step values |
+| `evidence/preflight_invalid_input/result.json` | Missing required parameter → pre-flight `failureClass: "invalid_input"` in under a second, before any browser launches |
 
 ## 11. Agent invokes capabilities as tools
 

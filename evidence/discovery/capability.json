@@ -62,7 +62,7 @@
     {
       "id": "step_1",
       "action": "fill",
-      "description": "Enter member ID 12345",
+      "description": "Enter member ID <memberId>",
       "target": {
         "strategies": [
           {
