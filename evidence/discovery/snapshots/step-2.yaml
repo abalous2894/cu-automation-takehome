@@ -15,10 +15,10 @@
       - rowgroup [ref=f1e10]:
         - row [ref=f1e11]:
           - cell "Member Name:" [ref=f1e12]
-          - cell "Jane Smith" [ref=f1e13]
+          - cell "[REDACTED]" [ref=f1e13]
         - row [ref=f1e14]:
           - 'cell "Member #:" [ref=f1e15]'
-          - cell "12345" [ref=f1e16]
+          - cell "<memberId>" [ref=f1e16]
         - row [ref=f1e17]:
           - cell "Status:" [ref=f1e18]
           - cell "ACTIVE" [ref=f1e19]

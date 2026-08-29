@@ -1,7 +1,7 @@
 {
   "status": "success",
   "outputs": {
-    "confirmation": "MERIDIAN CU CORE v4.2.1  |  Home Member Search Tenant A Tenant B\nSub-Account Created\n\nNew savings account created for member 12345."
+    "confirmation": "New savings account created for member 12345."
   },
   "runId": "42f517ea-69e3-4740-b301-c221c69942a8",
   "durationMs": 26422,

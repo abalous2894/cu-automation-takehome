@@ -1,15 +1,15 @@
 {"action":"navigate","description":"Navigate to http://localhost:3000/search","url":"http://localhost:3000/search","index":0,"timestamp":"2026-08-27T19:45:13.660Z"}
 {"action":"navigate","description":"Navigate to http://localhost:3000/search","url":"http://localhost:3000/search","index":0,"timestamp":"2026-08-27T20:11:36.923Z"}
 {"action":"navigate","description":"Navigate to http://localhost:3000/search","url":"http://localhost:3000/search","index":0,"timestamp":"2026-08-27T20:12:29.283Z"}
-{"stepId":"step_1","action":"fill","description":"Enter member number 12345 into search box","url":"http://localhost:3000/search","durationMs":62,"index":1,"timestamp":"2026-08-27T20:12:37.554Z"}
-{"stepId":"step_2","action":"fill","description":"Enter member number 12345 into search box directly","url":"http://localhost:3000/search","durationMs":29,"index":2,"timestamp":"2026-08-27T20:12:41.516Z"}
-{"stepId":"step_3","action":"click","description":"Click Search button to look up member 12345","url":"http://localhost:3000/member?id=12345","durationMs":50,"index":3,"timestamp":"2026-08-27T20:12:44.198Z"}
-{"action":"done","description":"Looked up member 12345 (Jane Smith, ACTIVE). Their savings balance is $8420.50 (checking balance is $1250.00 for reference).\"","durationMs":0,"index":4,"timestamp":"2026-08-27T20:12:47.028Z"}
+{"stepId":"step_1","action":"fill","description":"Enter member number <memberId> into search box","url":"http://localhost:3000/search","durationMs":62,"index":1,"timestamp":"2026-08-27T20:12:37.554Z"}
+{"stepId":"step_2","action":"fill","description":"Enter member number <memberId> into search box directly","url":"http://localhost:3000/search","durationMs":29,"index":2,"timestamp":"2026-08-27T20:12:41.516Z"}
+{"stepId":"step_3","action":"click","description":"Click Search button to look up member <memberId>","url":"http://localhost:3000/member?id=<memberId>","durationMs":50,"index":3,"timestamp":"2026-08-27T20:12:44.198Z"}
+{"action":"done","description":"Looked up member <memberId> ([REDACTED], ACTIVE). Their savings balance is $8420.50 (checking balance is $1250.00 for reference).\"","durationMs":0,"index":4,"timestamp":"2026-08-27T20:12:47.028Z"}
 {"action":"navigate","description":"Navigate to http://localhost:3000/search","url":"http://localhost:3000/search","index":0,"timestamp":"2026-08-27T20:15:12.851Z"}
-{"stepId":"step_1","action":"fill","description":"Enter member ID 12345 in search field","url":"http://localhost:3000/search","durationMs":65,"index":1,"timestamp":"2026-08-27T20:15:19.929Z"}
-{"stepId":"step_2","action":"click","description":"Click Search button","url":"http://localhost:3000/member?id=12345","durationMs":74,"index":2,"timestamp":"2026-08-27T20:15:21.264Z"}
-{"action":"done","description":"Looked up member 12345 (Jane Smith, ACTIVE) and found their Savings balance of $8420.50 on the Account Summary page.","durationMs":0,"index":3,"timestamp":"2026-08-27T20:15:23.329Z"}
+{"stepId":"step_1","action":"fill","description":"Enter member ID <memberId> in search field","url":"http://localhost:3000/search","durationMs":65,"index":1,"timestamp":"2026-08-27T20:15:19.929Z"}
+{"stepId":"step_2","action":"click","description":"Click Search button","url":"http://localhost:3000/member?id=<memberId>","durationMs":74,"index":2,"timestamp":"2026-08-27T20:15:21.264Z"}
+{"action":"done","description":"Looked up member <memberId> ([REDACTED], ACTIVE) and found their Savings balance of $8420.50 on the Account Summary page.","durationMs":0,"index":3,"timestamp":"2026-08-27T20:15:23.329Z"}
 {"action":"navigate","description":"Navigate to http://localhost:3000/search","url":"http://localhost:3000/search","index":0,"timestamp":"2026-08-27T20:16:53.447Z"}
-{"stepId":"step_1","action":"fill","description":"Enter member ID 12345","url":"http://localhost:3000/search","durationMs":46,"index":1,"timestamp":"2026-08-27T20:17:00.497Z"}
-{"stepId":"step_2","action":"click","description":"Click Search button","url":"http://localhost:3000/member?id=12345","durationMs":55,"index":2,"timestamp":"2026-08-27T20:17:01.766Z"}
-{"action":"done","description":"Looked up member 12345 (Jane Smith) via Member Search. Account is ACTIVE with a Savings balance of $8420.50 and Checking balance of $1250.00.","durationMs":0,"index":3,"timestamp":"2026-08-27T20:17:04.049Z"}
+{"stepId":"step_1","action":"fill","description":"Enter member ID <memberId>","url":"http://localhost:3000/search","durationMs":46,"index":1,"timestamp":"2026-08-27T20:17:00.497Z"}
+{"stepId":"step_2","action":"click","description":"Click Search button","url":"http://localhost:3000/member?id=<memberId>","durationMs":55,"index":2,"timestamp":"2026-08-27T20:17:01.766Z"}
+{"action":"done","description":"Looked up member <memberId> ([REDACTED]) via Member Search. Account is ACTIVE with a Savings balance of $8420.50 and Checking balance of $1250.00.","durationMs":0,"index":3,"timestamp":"2026-08-27T20:17:04.049Z"}

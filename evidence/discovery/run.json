@@ -15,7 +15,7 @@
     {
       "stepId": "step_1",
       "action": "fill",
-      "description": "Enter member ID 12345",
+      "description": "Enter member ID <memberId>",
       "url": "http://localhost:3000/search",
       "durationMs": 46,
       "index": 1,
@@ -25,14 +25,14 @@
       "stepId": "step_2",
       "action": "click",
       "description": "Click Search button",
-      "url": "http://localhost:3000/member?id=12345",
+      "url": "http://localhost:3000/member?id=<memberId>",
       "durationMs": 55,
       "index": 2,
       "timestamp": "2026-08-27T20:17:01.766Z"
     },
     {
       "action": "done",
-      "description": "Looked up member 12345 (Jane Smith) via Member Search. Account is ACTIVE with a Savings balance of $8420.50 and Checking balance of $1250.00.",
+      "description": "Looked up member <memberId> ([REDACTED]) via Member Search. Account is ACTIVE with a Savings balance of $8420.50 and Checking balance of $1250.00.",
       "durationMs": 0,
       "index": 3,
       "timestamp": "2026-08-27T20:17:04.049Z"

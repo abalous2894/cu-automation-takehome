@@ -89,11 +89,13 @@ Note in `capability.json`: the agent typed a literal test value during discovery
 
 ## 9. Sensitive data redaction
 
-**Claim:** Fields marked `sensitive` are redacted in persisted evidence (the caller still receives full outputs).
+**Claim:** Fields marked `sensitive` are redacted in persisted evidence; discovery logs scrub member names and literal test values from free-text descriptions and snapshots.
 
 | Look at | What it shows |
 |---------|---------------|
 | `evidence/replay_success/result.json` | `memberName: "[REDACTED]"` — flagged sensitive in the artifact's output definitions |
+| `evidence/discovery/result.json` | Same redaction on persisted discovery outputs |
+| `evidence/discovery/steps.jsonl` | Step descriptions use `<memberId>` placeholders; done summaries show `[REDACTED]` instead of the member name |
 
 ## 10. Guardrails fail closed — and always leave a record
 
